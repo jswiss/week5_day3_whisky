@@ -18,7 +18,7 @@ a {
 
 header {
   width: 100%;
-  background: black;
+  background: #A84905;
 }
 
 header nav { 
@@ -58,7 +58,7 @@ main, footer {
   margin: 40px auto;
 }
 
-main .artists {
+main .whiskies {
   margin: 20px 0;
 }
 
@@ -67,7 +67,7 @@ main ul {
   padding: 0;
 }
 
-.artists .row {
+.whiskies .row {
   height: 100px;
 }
 
@@ -75,7 +75,7 @@ main ul {
   height: 30px;
 }
 
-.artists .row, 
+.whiskies .row, 
 .songs .row {
   clear: both;
   background: #fff;
@@ -83,18 +83,18 @@ main ul {
   margin: 0 0 10px;
 }
 
-.artists .row img {
+.whiskies .row img {
   float: left;
   max-height: 100px;
 }
 
-.artists .row ul {
+.whiskies .row ul {
   float: left;
   margin: 0 0 0 10px;
 }
 
-.artists .row h2, 
-.artists .row h2 a {
+.whiskies .row h2, 
+.whiskies .row h2 a {
   font-size: 20px;
   margin: 0 0 10px;
   text-decoration: none;
@@ -102,8 +102,8 @@ main ul {
 
 .songs .row ul li a,
 .songs .row ul li button {
-.artists .row ul li a,
-.artists .row ul li button {
+.whiskies .row ul li a,
+.whiskies .row ul li button {
   color: black;
   background:none!important;
   border:none; 
@@ -133,3 +133,15 @@ input[type=submit],
   display: block;
   margin-bottom: 20px;
 }
+
+.img-wrap {
+  width: 300px;
+  height: 600px;
+  overflow: none;
+}
+
+.img-wrap img {
+  height: auto;
+  width: 300px;
+}
+

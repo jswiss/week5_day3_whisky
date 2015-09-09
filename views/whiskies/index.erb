@@ -5,12 +5,12 @@
 <div class="whiskies">
   <% @whiskies.each do |whisky| %>
   <div class="row">
-    <img src="<%= whisky.img_url %>" alt="<%= whisky.name %> photo">
+    <img src="<%= whisky.img_url %>" class="whisky-img" alt="<%= whisky.name %> photo">
     <ul>
       <li>
         <h2>
-          <a href="/whiskies/<%= whisky.id %>">
-            <%= whisky.name %>
+            <a href="/whiskies/<%= whisky.id %>">
+              <%= whisky.name %>
           </a>
         </h2>
       </li>
