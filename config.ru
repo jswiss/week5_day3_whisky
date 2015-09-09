@@ -3,7 +3,7 @@ require 'bundler'
 Bundler.require
 
 # Controllers
-require './models/artist'
+require './models/whisky'
 require './app'
 
-run Tunr
+run Dramr

@@ -1,4 +1,4 @@
-class Tunr < Sinatra::Base
+class Dramr < Sinatra::Base
 
   # General route actions
   get '/' do

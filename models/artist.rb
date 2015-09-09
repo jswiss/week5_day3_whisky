@@ -1,3 +1,3 @@
-class Artist < ActiveRecord::Base
+class Whisky < ActiveRecord::Base
 
 end
