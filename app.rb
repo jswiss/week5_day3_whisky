@@ -9,58 +9,58 @@ class Dramr < Sinatra::Base
     erb :about
   end
 
-  # RESTful Artist Controller Actions
+  # RESTful Routes for Whisky Controller Actions
   # index
-  get '/artists' do
-    @artists = Artist.all
-    erb(:"artists/index")
+  get '/whiskies' do
+    @whiskies = Whisky.all
+    erb(:"whiskies/index")
   end
 
   # new
-  get '/artists/new' do
-    @artist = Artist.new
-    erb(:"artists/new")
+  get '/whiskies/new' do
+    @whisky = Whisky.new
+    erb(:"whiskies/new")
   end
 
   # create
-  post '/artists' do
-    @artist = Artist.new(params[:artist])
-    if @artist.save
-      redirect("/artists/#{@artist.id}")
+  post '/whiskies' do
+    @whisky = Whisky.new(params[:whisky])
+    if @whisky.save
+      redirect("/whiskies/#{@whisky.id}")
     else
-      erb(:"artists/new")
+      erb(:"whiskies/edit")
     end
-  end
+  end  
 
   # show
-  get '/artists/:id' do
-    @artist = Artist.find(params[:id])
-    erb(:"artists/show")
+  get '/whiskies/:id' do
+    @whisky = Whisky.find(params[:id])
+    erb(:"whiskies/show")
   end
 
   # edit
-  get '/artists/:id/edit' do
-    @artist = Artist.find(params[:id])
-    erb(:"artists/edit")
+  get '/whiskies/:id/edit' do
+    @whisky = Whisky.find(params[:id])
+    erb(:"whiskies/edit")
   end
 
   # update
-  put '/artists/:id' do
-    @artist = Artist.find(params[:id])
-    if @artist.update_attributes(params[:artist])
-      redirect("/artists/#{artist.id}")
+  put '/whiskies/:id' do
+    @whisky = Whisky.find(params[:id])
+    if @whisky.update(params[:whisky])
+      redirect("/whiskies/#{@whisky.id}")
     else
-      erb(:"artists/edit")
+    erb(:"whiskies/edit")
     end
   end
 
   # delete
-  delete '/artists/:id/delete' do
-    @artist = Artist.find(params[:id])
-    if @artist.destroy
-      redirect('/artists')
+  delete '/whiskies/:id/delete' do
+    @whisky = Whisky.find(params[:id])
+    if @whisky.destroy
+      redirect("/whiskies")
     else
-      redirect("/artists/#{@artist.id}")
+      redirect("/whiskies/#{@whisky.id}")
     end
   end
 
