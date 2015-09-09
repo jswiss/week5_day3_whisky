@@ -45,9 +45,9 @@ class Dramr < Sinatra::Base
   end
 
   # update
-  put '/whiskies/:id' do
+  post '/whiskies/:id' do
     @whisky = Whisky.find(params[:id])
-    if @whisky.update(params[:whisky])
+    if @whisky.update_attributes(params[:whisky])
       redirect("/whiskies/#{@whisky.id}")
     else
     erb(:"whiskies/edit")
@@ -55,7 +55,7 @@ class Dramr < Sinatra::Base
   end
 
   # delete
-  delete '/whiskies/:id/delete' do
+  post '/whiskies/:id/delete' do
     @whisky = Whisky.find(params[:id])
     if @whisky.destroy
       redirect("/whiskies")

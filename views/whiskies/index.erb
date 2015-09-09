@@ -1,27 +1,27 @@
 <h2>Whiskies</h2>
 
-<a class="btn" href="/whiskies/new">Add Whiksy</a>
+<a class="btn" href="/whiskies/new">Add Whisky</a>
 
 <div class="whiskies">
-  <% @whiskies.each do |whiksy| %>
+  <% @whiskies.each do |whisky| %>
   <div class="row">
-    <img src="<%= whiksy.img_url %>" alt="<%= whiksy.name %> photo">
+    <img src="<%= whisky.img_url %>" alt="<%= whisky.name %> photo">
     <ul>
       <li>
         <h2>
-          <a href="/whiskies/<%= whiksy.id %>">
-            <%= whiksy.name %>
+          <a href="/whiskies/<%= whisky.id %>">
+            <%= whisky.name %>
           </a>
         </h2>
       </li>
       <li>
-        <a href="/whiskies/<%= whiksy.id %>/edit">
+        <a href="/whiskies/<%= whisky.id %>/edit">
           Edit
         </a>
       </li>
       <li>
         <li>
-          <form method="/whiskies/<%= whiksy.id %>/delete" action="post">
+          <form action="/whiskies/<%= whisky.id %>/delete" method="post">
             <button>Delete</button>
           </form>
         </li>
